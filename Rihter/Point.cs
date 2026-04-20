@@ -6,18 +6,18 @@ public struct Point
     public int Y { get; set; } 
     
     // Статичний конструктор
-    static Point()
-    {
-        Console.WriteLine("=> Спрацював статичний конструктор (.cctor) струкури Point!");
-    }
+    static Point() => Console.WriteLine("LOG: Point .cctor executed!");
 
+    // Конструктор без параметрів (доступний з C# 10)
+    public Point()
+    {
+        X = 5;
+        Y = 5;
+    }
     public Point(int x)
     {
-        // Цей рядок занулює ВСІ поля (X та Y стають 0)
+        // ХАК РІХТЕРА: Викликаємо Point() через this, щоб заповнити дефолти
         this = new Point();
-        
-        // Потім присвоємо потрібне значення
         X = x;
-        // Y залишиться 0 (або 5, якщо new Point() викликав конструктор вище)
     }
 }
