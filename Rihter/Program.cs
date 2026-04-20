@@ -1,18 +1,30 @@
-﻿using Rectangle = Rihter.Rectangle;
-using System.Drawing;
+﻿using System.Drawing;
+using Rihter.Labs._02_Polymorphism;
 
-/*
- * TOPIC: Struct Initialization and Type Constructors (.cctor)
- * LEARNED FROM: Richter, Chapter 8
- */
+Console.WriteLine("=== CLR Deep Dive: Lab  Runner ===\n");
 
-var rect = new Rectangle();
-Console.WriteLine($"[1] Rectangle field init: ({rect.TopLeft.X}, {rect.TopLeft.Y})");
-// Виведе 0,0, бо CLR занулила пам'ять, не викликаючи Point()
+RunStructLab();
 
+Console.WriteLine("\n----------------------------------\n");
 
-// Експеримент 2: Явний виклик конструктора
-var p = new Point(10);
-Console.WriteLine($"[2] Explicit point init: ({p.X}, {p.Y})");
-// Виведе 10,5 (10 - параметр, 5 - прийшло з 'this' = new Point()')
-Console.WriteLine("--- Кінець експерименту ---");
+RunPolymorphismLab();
+
+void RunStructLab()
+{
+    Console.WriteLine(">>> LAB 01: Struct Initialization");
+    var rect = new Rihter.Labs._01_StructsAndStatic.Rectangle();
+    Console.WriteLine($"Rectangle TopLeft: {rect.TopLeft.X}, {rect.TopLeft.Y} (Expected 0,0)");
+}
+
+void RunPolymorphismLab()
+{
+    Console.WriteLine(">>> LAB 02: Polymorphism");
+
+    Phone myDevice = new SmartPhone();
+    myDevice.Call();
+    myDevice.SendSms();
+    
+    Console.WriteLine("\n--- Casting to SmartPhone ---");
+    ((SmartPhone)myDevice).Call();
+
+}

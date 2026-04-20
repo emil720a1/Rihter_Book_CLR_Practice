@@ -1,0 +1,15 @@
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/bin/Debug/net10.0/Rihter
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/bin/Debug/net10.0/Rihter.deps.json
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/bin/Debug/net10.0/Rihter.runtimeconfig.json
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/bin/Debug/net10.0/Rihter.dll
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/bin/Debug/net10.0/Rihter.pdb
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.AssemblyInfoInputs.cache
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.AssemblyInfo.cs
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.csproj.CoreCompileInputs.cache
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.dll
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/refint/Rihter.dll
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.pdb
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.genruntimeconfig.cache
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/ref/Rihter.dll
+/Users/mcaleg2006/RiderProjects/Rihter/Rihter/obj/Debug/net10.0/Rihter.sourcelink.json
