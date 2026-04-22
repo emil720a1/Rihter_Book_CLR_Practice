@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using Rihter.Labs._02_Polymorphism;
+using Rihter.Labs._03_OperatorsAndExtensions;
 
 Console.WriteLine("=== CLR Deep Dive: Lab  Runner ===\n");
 
@@ -18,7 +19,7 @@ void RunStructLab()
 
 void RunPolymorphismLab()
 {
-    Console.WriteLine(">>> LAB 02: Polymorphism");
+    Console.WriteLine(">>> LAB 02: Polymorphism"); 
 
     Phone myDevice = new SmartPhone();
     myDevice.Call();
@@ -27,4 +28,24 @@ void RunPolymorphismLab()
     Console.WriteLine("\n--- Casting to SmartPhone ---");
     ((SmartPhone)myDevice).Call();
 
+}
+
+void RunOperatorsLab()
+{
+    Console.WriteLine(">>> LAB 03: Operators and Extensions");
+    
+    // Використовуємо implicit (неявне): int стає Weight автоматично
+    Weight bar = 20;
+
+    // Використовуємо метод розширення
+    Weight plates = 100.5.ToWeight();
+    
+    // Використовуємо оператор +
+    Weight total = bar + plates;
+    
+    Console.WriteLine($"Total weight: {total}");
+    
+    // Використовуємо explicit (явне): треба дужки (double)
+    double pounds = (double)total;
+    Console.WriteLine($"Weight in pounds: {pounds:F2} lbs");
 }
