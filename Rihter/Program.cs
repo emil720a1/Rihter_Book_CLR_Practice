@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using Rihter.Labs._02_Polymorphism;
 using Rihter.Labs._03_OperatorsAndExtensions;
+using Rihter.Labs._04_Parameters;
 
 Console.WriteLine("=== CLR Deep Dive: Lab  Runner ===\n");
 
@@ -48,4 +49,24 @@ void RunOperatorsLab()
     // Використовуємо explicit (явне): треба дужки (double)
     double pounds = (double)total;
     Console.WriteLine($"Weight in pounds: {pounds:F2} lbs");
+}
+
+
+void RunParametersLab()
+{
+    Console.WriteLine(">>> LAB 04: Parameters (ref, out, in)");
+
+    // 1. Експеримент з 'ref'
+    double barbellWeight = 180.0;
+    CompetitionLogic.AdjustWeight(ref barbellWeight, 2.5);
+
+    // 2. Експеримент з 'out'
+    if (CompetitionLogic.TryAttempt(barbellWeight, 200.0, out string resultMessage))
+    {
+        Console.WriteLine($"Result: {resultMessage}");
+    }
+    
+    // 3. Експеримент з 'in'
+    var athlete = new AthleteStats(200.0, 150.0, 260.0, "Oleh", "IPF");
+    CompetitionLogic.PrintAthleteInfo(in athlete);
 }
