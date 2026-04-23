@@ -1,7 +1,9 @@
 ﻿using System.Drawing;
+using System.Text;
 using Rihter.Labs._02_Polymorphism;
 using Rihter.Labs._03_OperatorsAndExtensions;
 using Rihter.Labs._04_Parameters;
+using Rihter.Labs._05_ExtensionMagic;
 
 Console.WriteLine("=== CLR Deep Dive: Lab  Runner ===\n");
 
@@ -69,4 +71,34 @@ void RunParametersLab()
     // 3. Експеримент з 'in'
     var athlete = new AthleteStats(200.0, 150.0, 260.0, "Oleh", "IPF");
     CompetitionLogic.PrintAthleteInfo(in athlete);
+}
+
+void RunExtensionMagicLab()
+{
+    Console.WriteLine("\n>>> LAB 05: Extension Methods & Null Safety");
+
+    StringBuilder? sb = null;
+    
+    // Experiment 1: Calling an extension on a null object
+    // It DOES NOT CRASH because the compiler converts this to SafeExtensions.IsNull(sb)
+    if (sb.IsNull())
+    {
+        Console.WriteLine("SB is null, but the program didn't crash! Thanks, Richter.");
+    }
+
+    // Experiment 2: Interface extension
+    // Demonstrates adding common functionality to various collection types
+    List<string>? workoutDays = null;
+    workoutDays.PrintAll(); // Also safe because of the internal null-check
+    
+    Console.WriteLine("\n--- Now watch how a regular instance method crashes ---");
+
+    try
+    {
+        sb.Replace("a", "b");
+    }
+    catch (NullReferenceException)
+    {
+        Console.WriteLine("Exception! Native instance methods do not forgive null references.");
+    }
 }

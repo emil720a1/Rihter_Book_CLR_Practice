@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rihter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4861211f49b1196504cbeb61fb26ac535617a76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a2e19432e4687afc29ec5924d8eda2478d210dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rihter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rihter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
