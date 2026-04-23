@@ -4,6 +4,7 @@ using Rihter.Labs._02_Polymorphism;
 using Rihter.Labs._03_OperatorsAndExtensions;
 using Rihter.Labs._04_Parameters;
 using Rihter.Labs._05_ExtensionMagic;
+using Rihter.Labs._06_PartialMethods;
 
 Console.WriteLine("=== CLR Deep Dive: Lab  Runner ===\n");
 
@@ -100,5 +101,23 @@ void RunExtensionMagicLab()
     catch (NullReferenceException)
     {
         Console.WriteLine("Exception! Native instance methods do not forgive null references.");
+    }
+}
+
+
+void RunPartialMethodsLab()
+{
+    Console.WriteLine("\n>>> LAB 06: Partial Methods");
+
+    var benchPress = new Exercise { Name = "Bench Press" };
+
+    try
+    {
+        Console.WriteLine("Attempting to set an empty name...");
+        benchPress.Name = "";
+    }
+    catch (ArgumentException ex)
+    {
+        Console.WriteLine($"Caught expected error: {ex.Message}");
     }
 }
